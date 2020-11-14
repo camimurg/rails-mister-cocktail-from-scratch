@@ -1,0 +1,13 @@
+<header>
+  <h1> Welcome to Mister Cocktail 2.0 </h1>
+  <p>With us you will experience the best hangover ever</p>
+</header>
+
+<ul>
+<% @cocktails.each do |cocktail| %>
+<li> <%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %> </li>
+<% end %>
+
+</ul>
+
+<%= link_to '+ Add a new cocktail', new_cocktail_path %>
