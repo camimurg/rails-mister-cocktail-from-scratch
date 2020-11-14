@@ -1,7 +1,8 @@
+<div class="container">
 <h1> <%= @cocktail.name.capitalize %> </h1>
-
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= f.button :submit, "Add dose", class: "btn btn-primary" %>
-<% end %>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.button :submit, "Add dose", class: "btn btn-primary" %>
+  <% end %>
+</div>
